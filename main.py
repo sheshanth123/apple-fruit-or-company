@@ -17,6 +17,3 @@ def classify_text():
 	label_str = classifytext.predict_text(input_str)
 	db_operations.insert_into_db(db_connection_object, db_connection_cursor, input_str, label_str)
 	return jsonify(responseStr = label_str)
-
-if __name__ == '__main__':
-	app.run()
