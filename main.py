@@ -9,7 +9,7 @@ db_connection_cursor = db_operations.get_db_cursor(db_connection_object)
 
 @app.route('/')
 def index():
-	return "test"
+	return render_template("index.html")
 
 @app.route('/classify', methods=['POST', 'GET'])
 def classify_text():
